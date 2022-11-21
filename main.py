@@ -7,6 +7,10 @@ app = Flask(__name__)
 def index(name, massage):
     return render_template('index.html', name=name, massage=massage)
 
+@app.route('/')
+def main():
+    return "Main page"
+
 
 if __name__ == '__main__': 
     app.run()
